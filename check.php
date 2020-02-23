@@ -45,10 +45,10 @@ if (!$fp) {
     while (!feof($fp)) {
         $temp .= fgets($fp, 1024);
     }
-    $flag = "Yes! :)";
+    $flag = "Yes! :)\n";
     foreach (explode("\r\n", $temp) as $line) {
         if (substr($line, 0, 1) === "5") {
-            $flag = "No. :(";
+            $flag = "No. :(\n";
         }
     }
     fclose($fp);
